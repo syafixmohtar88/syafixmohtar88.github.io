@@ -61,7 +61,9 @@
             </p>
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="#contact" class="px-8 py-4 bg-slate-900 text-white rounded-xl font-semibold hover:bg-slate-800 transition">Hire Syafiq</a>
-                <a href="#experience" class="px-8 py-4 border border-slate-200 rounded-xl font-semibold hover:bg-slate-100 transition">View Experience</a>
+                <a href="https://www.linkedin.com/in/syafixmohtar8788/" target="_blank" class="px-8 py-4 border border-slate-200 rounded-xl font-semibold hover:bg-slate-100 transition flex items-center">
+                    <i class="fa-brands fa-linkedin mr-2"></i> LinkedIn Profile
+                </a>
             </div>
         </div>
     </section>
@@ -104,6 +106,22 @@
                 <div class="relative bg-slate-100 p-8 rounded-3xl h-80 flex flex-col justify-end shadow-sm">
                     <i class="fa-solid fa-quote-left text-blue-600 text-4xl mb-4 opacity-20"></i>
                     <p class="text-2xl font-semibold text-slate-800 italic">"Focusing on fulfilling needs of both upstream and downstream businesses since 2015."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification Section -->
+    <section class="py-16 px-6 bg-blue-50">
+        <div class="max-w-5xl mx-auto">
+            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-blue-100 flex flex-col md:flex-row items-center gap-8">
+                <div class="w-20 h-20 bg-blue-600 rounded-2xl flex items-center justify-center shrink-0">
+                    <i class="fa-solid fa-certificate text-4xl text-white"></i>
+                </div>
+                <div>
+                    <span class="text-blue-600 font-bold text-sm uppercase tracking-widest">Professional Certification</span>
+                    <h2 class="text-2xl font-bold text-slate-900 mt-2">Caliper Certification Program</h2>
+                    <p class="text-slate-600 mt-2">Awarded by <span class="font-semibold text-slate-800">Talogy Inc. (Australia)</span>. Specialized in behavioral assessment and talent analytics to predict job performance and culture fit.</p>
                 </div>
             </div>
         </div>
@@ -209,7 +227,7 @@
                 <p class="text-slate-500 text-xl font-light">012-4736454 | Ipoh, Perak</p>
             </div>
             <div class="flex justify-center space-x-6">
-                <a href="https://www.linkedin.com/in/syafixmohtar8788" target="_blank" class="w-14 h-14 flex items-center justify-center bg-slate-100 rounded-full hover:bg-blue-600 hover:text-white transition shadow-sm">
+                <a href="https://www.linkedin.com/in/syafixmohtar8788/" target="_blank" class="w-14 h-14 flex items-center justify-center bg-slate-100 rounded-full hover:bg-blue-600 hover:text-white transition shadow-sm">
                     <i class="fa-brands fa-linkedin-in text-xl"></i>
                 </a>
                 <a href="mailto:syafixmuhammad77@gmail.com" class="w-14 h-14 flex items-center justify-center bg-slate-100 rounded-full hover:bg-slate-900 hover:text-white transition shadow-sm">
@@ -227,11 +245,14 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+                const href = this.getAttribute('href');
+                if (href.startsWith('#')) {
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
                 }
             });
         });
